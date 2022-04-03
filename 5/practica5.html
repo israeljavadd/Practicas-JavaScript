@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<header><title>Datos en formulario</title>
+<script>
+    function saludo()
+    {
+        let nom_usuario = document.fdatos.entrada.value;
+        document.writeln("Hola, buen dia "+nom_usuario);
+    }
+</script>
+</header>
+
+<body>
+    <form name="fdatos">
+        Escriba tu nombre: <input type="text" size="10" name="entrada"/>
+        <input type="button" value="pulsa aqui" onclick="saludo()" />
+    </form>
+</body>
+</html>

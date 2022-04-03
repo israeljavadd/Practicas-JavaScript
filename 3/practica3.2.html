@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+        <script type="text/javascript">
+            function carrosScript() {
+                
+            let marca,modelo,descuento = 0;
+            marca=document.fmarca.marca.value;
+            modelo=document.fmarca.modelo.value;
+           
+            if((marca=="LA Ferrari")&&(modelo=="F355"))
+        {
+            descuento=5;
+
+        }
+        if((marca=="Chevrolet")&&(modelo=="Onix"))
+        {
+            descuento=10;
+        }
+        document.write("<h3>Su descuento es "+descuento+"</h3>");
+    }
+        </script>
+        </head>
+    <body>
+    <form name="fmarca">
+        Ingresa la Marca
+        <input type="text" size="10" name="marca"/>
+        <br>
+        <br>
+        Ingresa el Modelo
+        <input type="text" size="10" name="modelo"/>
+        <br>
+        <br>
+        <input type="button" value="Enviar" onclick="carrosScript()"/>
+        
+        
+        </form>
+        </body>
+</html>

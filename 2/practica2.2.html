@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Datos en formulario</title>
+<script type="text/javascript">
+function codigo(){
+    let nota1, nota2, nota3;
+    let dato1, dato2,dato3, media;
+    var resultado;
+    nota1 = parseInt(document.fdatos.dato1.value);
+    nota2 = parseInt(document.fdatos.dato2.value);
+    nota3 = parseInt(document.fdatos.dato3.value);
+
+    media=(nota1 + nota2 + nota3)/3;
+    
+    if (media < 5){
+        resultado = "Suspendido";
+    }
+    else
+    {
+        resultado = "Aprobado";
+    }
+    document.write("<h3>La nota final es "+resultado+"</h3>");
+}
+</script>
+</head>
+<body>
+    <form name="fdatos">
+        La Primera Calificacion: <input type="text" size="10" name="dato1"/>
+        <br>
+        La Segunda Calificacion: <input type="text" size="10" name="dato2"/>
+        <br>
+        La Tercera Calificacion: <input type="text" size="10" name="dato3"/>
+        <br>
+        <input type="button" value="Enviar" onclick="codigo()" />
